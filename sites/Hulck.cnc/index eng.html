@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap"
+    />
+    <style>
+      .body {
+        position: relative;
+        width: 100%;
+        height: calc((100vw / 1280) * 832);
+        left: 0;
+        top: 0;
+        /* Background dark */
+        background: #1e1e1e;
+        font-family: "Manrope";}
+
+      .main {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        /* Background dark */
+        background: #1b1c21;
+        background-image: url(back/Background.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+
+      .setbar {
+        position: absolute;
+        width: 57.03%;
+        height: 100%;
+        left: 0;
+        top: 0;
+
+        background: rgba(196, 196, 196, 0.1);
+        backdrop-filter: blur(11px);
+        /* Note: backdrop-filter has minimal browser support */
+        border-radius: 0;
+      }
+      
+      .inform {
+        position: absolute;
+        left: 3.12%;
+        right: 89.06%;
+        top: 3.61%;
+        bottom: 92.79%;
+        height: 3.605769231vh;
+
+        /* Не вибрані категорії */
+      }
+
+      .name {
+    left: 9.21875vw;
+    position: absolute;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.90625vw;
+    line-height: 5.1923077%;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.9);
+    top: 17.13942308%;
+  }
+
+ 
+
+      .text {
+        position: absolute;
+        width: 41.71875vw;
+        height: 12.98076923%;
+        left: 9.21875vw;
+        top: 26.92307692%;
+
+        /* Підзаголовок */
+
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.5625vw;
+        line-height: 1.5625vw;
+        display: flex;
+        align-items: center;
+
+        /* Самий світлий */
+
+        color: #A3BDAD
+      }
+
+      .main_Vector {
+        display: flex;
+      }
+
+      .blok_vector {
+        position: absolute;
+        
+        height: 19.23076923%;
+        left: 9.21875vw;
+        top: 48.19711538%;
+        color: #A3BDAD;
+      }
+
+      .Vector_img {
+        margin-top: 1.201923077%;
+        position: absolute;
+        width: 3.125vw;
+        height: 3.125vw;
+        
+      }
+      
+      .text_p {
+        padding-left: 6.171875vw;
+        font-size: 1.5625vw;
+      }
+
+      .button {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 1.171875vw 6.009615384%;
+        gap: 10px;
+        position: absolute;
+        width: 20.078125vw;
+        height: 6.009615384%;
+        left: 9.21875vw;
+        top: 77.13942308%;
+
+        /* вибране */
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 15px;
+      }
+
+      .button a {
+        color: #1b1c21;
+
+        font-style: normal;
+        font-weight: 700;
+        font-size: 9.5625vw;
+      }
+
+      
+      
+
+
+
+      .contact_img {
+        position: absolute;
+        width: 35.703125vw;
+        height: 3.125vw;
+        left: 61.09375vw;
+        top: 3.004807692%;
+      }
+
+      .contact_namber {
+        position: absolute;
+        width: 3.125vw;
+        height: 3.125vw;
+        left: 5.78125vw;
+      }
+
+      .social_one {
+        position: absolute;
+        width: 3.125vw;
+        height: 3.125vw;
+        left: 15.15625vw;
+      }
+
+      .social_tow {
+        position: absolute;
+        width: 3.125vw;
+        height: 3.125vw;
+        left: 10.46875vw;
+      }
+
+      .social_thre {
+        position: absolute;
+        width: 3.125vw;
+        height: 3.125vw;
+        left: 24.53125vw;
+      }
+
+      .social_four {
+        position: absolute;
+        width: 3.125vw;
+        height: 3.125vw;
+        left: 19.84375vw;
+      }
+
+      .language {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        position: absolute;
+        width: 6.484375vw;
+        height: 3.125vw;
+        left: 29.140625vw;
+
+        /* Black done */
+      }
+
+      .contact {
+        display: flex;
+      }
+    </style>
+    <title>Hulk.cnc</title>
+  </head>
+  <body class="body">
+    <div class="main">
+      <div class="setbar">
+        <img src="img/mitka.png" alt="" class="inform" />
+        <h1 class="name">CNC milling</h1>
+        <p class="text">
+          We can produce parts of any complexity,
+from simple to highly accurate using different
+materials such as steel, aluminum, copper,
+brass and other metals.
+        </p>
+        <div class="blok_vector">
+          <div class="main_Vector">
+            <img src="img/Vector.png" alt="" class="Vector_img" />
+            <p class="text_p">Design services</p>
+          </div>
+          <div class="main_Vector">
+            <img src="img/Vector.png" alt="" class="Vector_img" />
+            <p class="text_p">We work with hard metals</p>
+          </div>
+          <div class="main_Vector">
+            <img src="img/Vector.png" alt="" class="Vector_img" />
+            <p class="text_p">We make stamps and molds</p>
+          </div>
+        </div>
+        <div>
+          <button class="button">Calculate the cost</button>
+        </div>
+      </div>
+      
+      
+      <div>
+        <div class="contact">
+          <div class="contact_img">
+            <div class="contact_namber">
+              <!DOCTYPE html>
+              <html>
+                <head>
+                  <meta
+                    name="viewport"
+                    content="width=device-width, initial-scale=1"
+                  />
+                  <style>
+                    /* Styles for the popup container */
+                    .popup {
+                      position: relative;
+                      display: inline-block;
+                      cursor: pointer;
+                      -webkit-user-select: none;
+                      -moz-user-select: none;
+                      -ms-user-select: none;
+                      user-select: none;
+                    }
+
+                    /* Styles for the popup window */
+                    .popup .popuptext {
+                      visibility: hidden;
+                      width: 191px;
+                      height: 40px;
+                      text-align: center;
+                      border-radius: 6px;
+                      padding: 8px 0;
+                      position: absolute;
+                      z-index: 1;
+                      top: calc(100% + 10px);
+                      left: 50%;
+                      transform: translateX(-50%);
+                      background: url(img/Group66.png) no-repeat;
+                      background-size: cover;
+                    }
+
+                    /* Show class for displaying the popup window */
+                    .popup .show {
+                      visibility: visible;
+                      -webkit-animation: fadeIn 1s;
+                      animation: fadeIn 1s;
+                    }
+
+                    /* Animation for fading in the popup window */
+                    @-webkit-keyframes fadeIn {
+                      from {
+                        opacity: 0;
+                      }
+                      to {
+                        opacity: 1;
+                      }
+                    }
+
+                    @keyframes fadeIn {
+                      from {
+                        opacity: 0;
+                      }
+                      to {
+                        opacity: 1;
+                      }
+                    }
+
+                    /* Styles for the email address link */
+                    .popup .popuptext a {
+                      color: #27e427;
+                    }
+                    .popup .popuptext a.text_emeil {
+                      position: absolute;
+                      top: calc(50% + 10px);
+                      left: calc(50%);
+                      transform: translate(-50%, -50%);
+                      font-size: 15px;
+                    }
+                    .popup img {
+  width: 3.125vw;
+  height: 3.125vw;
+}
+
+                  </style>
+                </head>
+                <body>
+                  <!-- Popup container -->
+                  <div class="popup" onclick="togglePopup()">
+                    <!-- Image for the popup -->
+                    <img src="img/number.png" alt="Email_Icon" />
+                    <!-- Content of the popup -->
+                    <span class="popuptext" id="myPopup">
+                      <a class="text_emeil" href="+38(068) 596 38 65"
+                        >+380685963865</a
+                      >
+                    </span>
+                  </div>
+
+                  <script>
+                    // Function to toggle the visibility of the popup window
+                    function togglePopup() {
+                      var popup = document.getElementById("myPopup");
+                      popup.classList.toggle("show");
+                    }
+                  </script>
+                </body>
+              </html>
+            </div>
+            <a href="https://t.me/HulkCNC"
+              ><img src="img/Telegram.png" alt="" class="social_one"
+            /></a>
+            <a href="viber://chat?number=380951869286"
+              ><img src="img/Viber.png" alt="" class="social_tow"
+            /></a>
+            <div class="social_thre">
+              <!DOCTYPE html>
+              <html>
+                <head>
+                  <meta
+                    name="viewport"
+                    content="width=device-width, initial-scale=1"
+                  />
+                  <style>
+                    /* Styles for the popup container */
+                    .popup {
+                      position: relative;
+                      display: inline-block;
+                      cursor: pointer;
+                      -webkit-user-select: none;
+                      -moz-user-select: none;
+                      -ms-user-select: none;
+                      user-select: none;
+                    }
+
+                    /* Styles for the popup window */
+                    .popup .popuptext {
+                      visibility: hidden;
+                      width: 191px;
+                      height: 40px;
+                      text-align: center;
+                      border-radius: 6px;
+                      padding: 8px 0;
+                      position: absolute;
+                      z-index: 1;
+                      top: calc(100% + 10px);
+                      left: 50%;
+                      transform: translateX(-50%);
+                      background: url(img/Group66.png) no-repeat;
+                      background-size: cover;
+                    }
+
+                    /* Show class for displaying the popup window */
+                    .popup .show {
+                      visibility: visible;
+                      -webkit-animation: fadeIn 1s;
+                      animation: fadeIn 1s;
+                    }
+
+                    /* Animation for fading in the popup window */
+                    @-webkit-keyframes fadeIn {
+                      from {
+                        opacity: 0;
+                      }
+                      to {
+                        opacity: 1;
+                      }
+                    }
+
+                    @keyframes fadeIn {
+                      from {
+                        opacity: 0;
+                      }
+                      to {
+                        opacity: 1;
+                      }
+                    }
+                    .popup img {
+  width: 3.125vw;
+  height: 3.125vw;
+}
+
+
+                    /* Styles for the email address link */
+                    .popup .popuptext a {
+                      color: #27e427;
+                    }
+                    .popup .popuptext a.text_emeil {
+                      position: absolute;
+                      top: calc(50% + 10px);
+                      left: calc(50%);
+                      transform: translate(-50%, -50%);
+                      font-size: 15px;
+                    }
+                  </style>
+                </head>
+                <body>
+                  <!-- Popup container -->
+                  <div class="popup" onclick="togglePopup()">
+                    <!-- Image for the popup -->
+                    <img src="img/emeil.png"  alt="Email_Icon" />
+                    <!-- Content of the popup -->
+                    <span class="popuptext" id="myPopup">
+                      <a
+                        class="text_emeil"
+                        href="https://mail.google.com/mail/u/0/#search/karandahh%40gmail.com?compose=new"
+                        >hulkcnc@gmail.com</a
+                      >
+                    </span>
+                  </div>
+
+                  <script>
+                    // Function to toggle the visibility of the popup window
+                    function togglePopup() {
+                      var popup = document.getElementById("myPopup");
+                      popup.classList.toggle("show");
+                    }
+                  </script>
+                </body>
+              </html>
+            </div>
+
+            <div>
+              <a href="karandahh@gmail.com"
+                ><img src="img/Instagram.png" alt="" class="social_four"
+              /></a>
+              <div  class="language"><!DOCTYPE html>
+                <html>
+                  <head>
+                    <meta name="viewport" content="width=device-width, initial-scale=1" />
+                    <style>
+                      /* Styles for the popup container */
+                      .pop {
+                        position: relative;
+                        display: inline-block;
+                        cursor: pointer;
+                        -webkit-user-select: none;
+                        -moz-user-select: none;
+                        -ms-user-select: none;
+                        user-select: none;
+                      }
+                
+                      /* Styles for the popup window */
+                      .pop .popuptext {
+                        visibility: hidden;
+                        width: 83px;
+                        height: 106px;
+                        text-align: center;
+                        border-radius: 6px;
+                        padding: 8px 0;
+                        position: absolute;
+                        z-index: 1;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        background-size: cover;
+                      }
+                
+                      /* Show class for displaying the popup window */
+                      .pop .show {
+                        visibility: visible;
+                        -webkit-animation: fadeIn 1s;
+                        animation: fadeIn 1s;
+                      }
+                
+                      /* Animation for fading in the popup window */
+                      @-webkit-keyframes fadeIn {
+                        from {
+                          opacity: 0;
+                        }
+                        to {
+                          opacity: 1;
+                        }
+                      }
+                
+                      @keyframes fadeIn {
+                        from {
+                          opacity: 0;
+                        }
+                        to {
+                          opacity: 1;
+                        }
+                      }
+                
+                      /* Styles for the email address link */
+                      .pop .popuptext a {
+                        color: #F1FFF6;
+                        
+                        display: block;
+                        margin-bottom: 1.25vw;
+                        font-size: 1.1vw;
+                      }
+                
+                      .pop .popuptext a:hover {
+                        color: #27E427;
+                      }
+                      .pop .popuptext img {
+                        display: none;
+                      }
+                      .languageIcon{
+                        width: 6.484375vw;
+                      }
+                    </style>
+                  </head>
+                  <body onclick="hidePopup()">
+                    <!-- Popup container -->
+                    <div class="pop" onclick="togglePopup(event)">
+                      <!-- Image for the popup -->
+                      <img class="languageIcon" id="languageIcon" src="img/lang_eng.png" alt="Email_Icon" onclick="changeLanguage('main')" />
+                      <!-- Content of the popup -->
+                      <span class="popuptext" id="my_popup">
+                        <a class="padi" href="#" onclick="changeLanguage('uk')">УКР</a>
+                        <a class="padi" href="#" onclick="changeLanguage('ru')">РУС</a>
+                        <a class="padi" href="#" onclick="changeLanguage('en')">ENG</a>
+                      </span>
+                    </div>
+                
+                    
+                
+                    <script>
+                      // Function to toggle the visibility of the popup window
+                      function togglePopup(event) {
+                        event.stopPropagation();
+                        var pop = document.getElementById("my_popup");
+                        pop.classList.toggle("show");
+                      }
+                
+                      function hidePopup() {
+                        var languageIcon = document.getElementById("languageIcon");
+                        var pop = document.getElementById("my_popup");
+                        if (languageIcon.src.endsWith("lang_main.png")) {
+                          languageIcon.src = "img/lang_ua.png";
+                          pop.classList.remove("show");
+                        }
+                      }
+                
+                      function changeLanguage(language) {
+                        var contentElement = document.getElementById("content");
+                        var languageIcon = document.getElementById("languageIcon");
+                        switch (language) {
+                          case "main":
+                          
+                    
+                    
+                
+                            languageIcon.src = "img/lang_main.png";
+                            break;
+                          case "uk":
+                          window.location.href = "../Hulck.cnc/index%20ua.html";
+                            languageIcon.src = "img/lang_ua.png";
+                            break;
+                          case "ru":
+                          window.location.href = "../Hulck.cnc/index%20ru.html";
+                            languageIcon.src = "img/lang_main.png";
+                            break;
+                          case "en":
+                          window.location.href = "../Hulck.cnc/index%20eng.html";
+                            languageIcon.src = "img/lang_main.png";
+                            break;
+                          default:
+                            contentElement.innerText = "";
+                            languageIcon.src = "img/lang_ua.png";
+                            break;
+                        }
+                
+                        var pop = document.getElementById("myPopup");
+                        pop.classList.remove("show");
+                      }
+                    </script>
+                  </body>
+                </html>
+                 </div>
+        </div>
+
+        
+      </div>
+    </div>
+  </body>
+</html>

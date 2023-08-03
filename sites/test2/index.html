@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      /* Styles for the popup container */
+      .popup {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      /* Styles for the popup window */
+      .popup .popuptext {
+        visibility: hidden;
+        width: 83px;
+        height: 106px;
+        text-align: center;
+        border-radius: 6px;
+        padding: 8px 0;
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        transform: translateX(-50%);
+        background-size: cover;
+      }
+
+      /* Show class for displaying the popup window */
+      .popup .show {
+        visibility: visible;
+        -webkit-animation: fadeIn 1s;
+        animation: fadeIn 1s;
+      }
+
+      /* Animation for fading in the popup window */
+      @-webkit-keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      /* Styles for the email address link */
+      .popup .popuptext a {
+        color: #F1FFF6;
+        
+        display: block;
+        margin-bottom: 1.25vw;
+        font-size: 1.1vw;
+      }
+
+      .popup .popuptext a:hover {
+        color: #27E427;
+      }
+      .popup .popuptext img {
+        display: none;
+      }
+      .languageIcon{
+        width: 6.484375vw;
+      }
+    </style>
+  </head>
+  <body onclick="hidePopup()">
+    <!-- Popup container -->
+    <div class="popup" onclick="togglePopup(event)">
+      <!-- Image for the popup -->
+      <img class="languageIcon" id="languageIcon" src="img/lang_ua.png" alt="Email_Icon" onclick="changeLanguage('main')" />
+      <!-- Content of the popup -->
+      <span class="popuptext" id="myPopup">
+        <a class="padi" href="#" onclick="changeLanguage('uk')">УКР</a>
+        <a class="padi" href="#" onclick="changeLanguage('ru')">РУС</a>
+        <a class="padi" href="#" onclick="changeLanguage('en')">ENG</a>
+      </span>
+    </div>
+
+    
+
+    <script>
+      // Function to toggle the visibility of the popup window
+      function togglePopup(event) {
+        event.stopPropagation();
+        var popup = document.getElementById("myPopup");
+        popup.classList.toggle("show");
+      }
+
+      function hidePopup() {
+        var languageIcon = document.getElementById("languageIcon");
+        var popup = document.getElementById("myPopup");
+        if (languageIcon.src.endsWith("lang_main.png")) {
+          languageIcon.src = "img/lang_ua.png";
+          popup.classList.remove("show");
+        }
+      }
+
+      function changeLanguage(language) {
+        var contentElement = document.getElementById("content");
+        var languageIcon = document.getElementById("languageIcon");
+        switch (language) {
+          case "main":
+          
+    
+    
+
+            languageIcon.src = "img/lang_main.png";
+            break;
+          case "uk":
+          window.location.href = "../Hulck.cnc/index%20ua.html";
+            languageIcon.src = "img/lang_ua.png";
+            break;
+          case "ru":
+          window.location.href = "../Hulck.cnc/index%20ru.html";
+            languageIcon.src = "img/lang_main.png";
+            break;
+          case "en":
+          window.location.href = "../Hulck.cnc/index%20eng.html";
+            languageIcon.src = "img/lang_main.png";
+            break;
+          default:
+            contentElement.innerText = "";
+            languageIcon.src = "img/lang_ua.png";
+            break;
+        }
+
+        var popup = document.getElementById("myPopup");
+        popup.classList.remove("show");
+      }
+    </script>
+  </body>
+</html>

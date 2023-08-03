@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Зміна мови</title>
+  <style>
+    .language-button {
+      background-color: #f2f2f2;
+      border: none;
+      color: #333;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+
+    .language-button:hover {
+      background-color: #ddd;
+    }
+  </style>
+</head>
+<body>
+  
+  
+  <div id="language-buttons">
+    <button class="language-button" onclick="changeLanguage('ru')">Русский</button>
+    <button class="language-button" onclick="changeLanguage('uk')">Українська</button>
+    <button class="language-button" onclick="changeLanguage('en')">English</button>
+  </div>
+
+  
+
+  <script>
+    function changeLanguage(language) {
+      var contentElement = document.getElementById("content");
+
+      switch (language) {
+        case "ru":
+          contentElement.innerText = "Это контент на русском языке.";
+          break;
+        case "uk":
+          contentElement.innerText = "Це контент українською мовою.";
+          break;
+        case "en":
+          contentElement.innerText = "This is content in English.";
+          break;
+        default:
+          contentElement.innerText = "Це контент на вихідній мові.";
+          break;
+      }
+    }
+  </script>
+</body>
+</html>
