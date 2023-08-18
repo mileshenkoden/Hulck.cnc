@@ -1,0 +1,231 @@
+.body {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+
+    /* Background dark */
+    background: #1E1E1E;
+    font-family: 'Manrope';
+}
+body {
+    font-family: 'Manrope', sans-serif;
+}
+
+.name,
+.text,
+.text_p,
+.button {
+    font-family: 'Manrope', sans-serif;
+}
+
+.main {
+    position: absolute;
+    width: 1280px;
+    height: 832px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    /* Background dark */
+    background: #1B1C21;
+    background: url(back/Background.jpg);
+
+}
+
+.setbar {
+    position: absolute;
+    width: 650px;
+    height: 832px;
+    left: 0;
+    top: 0;
+
+    background: rgba(196, 196, 196, 0.1);
+    backdrop-filter: blur(11px);
+    /* Note: backdrop-filter has minimal browser support */
+    border-radius: 0;
+}
+
+.inform {
+    position: absolute;
+    left: 3.12%;
+    right: 89.06%;
+    top: 3.61%;
+    bottom: 92.79%;
+
+    /* Не вибрані категорії */
+}
+
+.name {
+    position: absolute;
+    width: 506px;
+    height: 61px;
+    left: 70px;
+    top: 140px;
+
+    /* Заголовок головний */
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 68px;
+    text-transform: uppercase;
+
+    /* вибране */
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.text {
+    position: absolute;
+    width: 436px;
+    height: 100px;
+    left: 70px;
+    top: 251px;
+
+    /* Підзаголовок */
+
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+
+    /* Самий світлий */
+
+    color: rgba(239, 239, 239, 0.8);
+}
+
+.main_Vector {
+    display: flex;
+}
+
+.blok_vector {
+    position: absolute;
+    width: 359px;
+    height: 160px;
+    left: 70px;
+    top: 401px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.Vector_img {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+}
+
+.text_p {
+    padding-left: 79px;
+}
+
+.button {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 15px 50px;
+    gap: 10px;
+    position: absolute;
+    width: 257px;
+    height: 50px;
+    left: 70px;
+    top: 641px;
+
+    /* вибране */
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+}
+
+.button a {
+    color: #1B1C21;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15
+}
+
+.Group {
+    position: absolute;
+    width: 605.75px;
+    height: 445.91px;
+    left: 696.73px;
+    top: 391px;
+}
+
+.contact_img {
+    position: absolute;
+    width: 457px;
+    height: 40px;
+    left: 783px;
+    top: 25px;
+
+}
+
+.contact_namber {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 74px
+}
+
+.social_one {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 194px;
+
+
+}
+
+.social_tow {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 134px;
+
+
+}
+
+.social_thre {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 314px;
+
+
+}
+
+.social_four {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 254px;
+    display: flex;
+
+
+}
+
+.language {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 10px;
+
+    position: absolute;
+    width: 83px;
+    height: 40px;
+    left: 374px;
+
+
+    /* Black done */
+
+
+
+}
+
+.contact {
+    display: flex;
+}
