@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      /* Styles for the popup container */
+      .pop {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      /* Styles for the popup window */
+      .pop .popuptext {
+        visibility: hidden;
+        width: 83px;
+        height: 106px;
+        text-align: center;
+        border-radius: 6px;
+        padding: 8px 0;
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        transform: translateX(-50%);
+        background-size: cover;
+      }
+
+      /* Show class for displaying the popup window */
+      .pop .show {
+        visibility: visible;
+        -webkit-animation: fadeIn 1s;
+        animation: fadeIn 1s;
+      }
+
+      /* Animation for fading in the popup window */
+      @-webkit-keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      /* Styles for the email address link */
+      .pop .popuptext a {
+        color: #f1fff6;
+        display: block;
+        margin-bottom: 1vw;
+        font-size: 1.1vw;
+      }
+
+      .pop .popuptext a:hover {
+        color: #27e427;
+      }
+      .pop .popuptext img {
+        display: none;
+      }
+      .languageIcon {
+        width: 6.484375vw;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Popup container -->
+    <div class="pop" onclick="togglePopup(event)">
+      <!-- Image for the popup -->
+      <img
+        class="languageIcon"
+        id="languageIcon"
+        src="img/lang_ru.png"
+        alt="Email_Icon"
+        onclick="changeLanguage('main')"
+      />
+      <!-- Content of the popup -->
+      <span class="popuptext" id="my_popup">
+        <a class="padi" href="#" onclick="changeLanguage('uk')">УКР</a>
+        <a class="padi" href="#" onclick="changeLanguage('ru')">РУС</a>
+        <a class="padi" href="#" onclick="changeLanguage('en')">ENG</a>
+      </span>
+    </div>
+    <h1 id="greeting">доброго ранку</h1>
+
+    <script>
+      // Function to toggle the visibility of the popup window
+      function togglePopup(event) {
+        event.stopPropagation();
+        var pop = document.getElementById("my_popup");
+        pop.classList.toggle("show");
+      }
+
+      function changeLanguage(language) {
+        var greeting = document.getElementById("greeting");
+        switch (language) {
+          case "main":
+          languageIcon.src = "img/lang_main.png";
+            greeting.innerText = "доброго ранку";
+            
+            break;
+          case "uk":
+            
+          languageIcon.src = "img/lang_ua.png";
+            greeting.innerText = "доброго ранку";
+            pop.classList.toggle("show");
+            break;
+          case "ru":
+          languageIcon.src = "img/lang_ru.png";
+            greeting.innerText = "доброе утро";
+            pop.classList.toggle("show");
+            break;
+          case "en":
+          languageIcon.src = "img/lang_eng.png";
+            greeting.innerText = "good morning";
+            pop.classList.toggle("show");
+            break;
+          default:
+          languageIcon.src = "img/lang_main.png";
+            greeting.innerText = "";
+            
+            break;
+        }
+
+        var pop = document.getElementById("my_popup");
+        pop.classList.remove("show");
+      }
+    </script>
+  </body>
+</html>
