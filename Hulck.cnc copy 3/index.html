@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style1.css" />
+  <title>Hulk.cnc</title>
+</head>
+
+<body>
+  <div class="color_bord"></div>
+  <img id="corner-image" src="img/image.png" />
+  <header class="header">
+    <img src="img/mitka.png" class="logo" alt="Logo" />
+    <div class="contact_img">
+      <div ><a href="#"><img src="img/Telegram.png" alt="Telegram" class="contact" /></a>
+      <a href="#"><img src="img/Viber.png" alt="Viber" class="contact" /></a>
+      <a href="#"><img src="img/number.png" alt="Cellphone" class="contact" /></a></div>
+      
+    
+    
+    <div class="pop" onclick="togglePopup(event)">
+      <!-- Image for the popup -->
+      <img
+        class="languageIcon"
+        id="languageIcon"
+        src="img/lang_ua.png"
+        alt="Email_Icon"
+        onclick="changeLanguage('main')"
+      />
+      <!-- Content of the popup -->
+      <span class="popuptext" id="my_popup">
+        <a class="padi" href="#" onclick="changeLanguage('uk')">УКР</a>
+        <a class="padi" href="#" onclick="changeLanguage('ru')">РУС</a>
+        <a class="padi" href="#" onclick="changeLanguage('en')">ENG</a>
+      </span>
+    </div>
+  </div>
+  </header>
+
+  <main class="main_ua">
+    <article>
+      <h1 class="name">ЧПУ фрезерування</h1>
+      <p class="text">Ми можемо виготовити деталі будь-якої складності,
+        від простих до високоточних з використанням різних
+        матеріалів, таких як сталь, алюміній, мідь,
+        латунь та інші метали.</p>
+      <ul>
+        <li>Конструкторські послуги</li>
+        <li>Працюємо з твердими металами</li>
+        <li>Виготовляємо штампи та прес-форми</li>
+      </ul>
+    </article>
+
+    <article>
+      <button class="bottom" onclick="hideButtons()">Розрахувати вартість</button>
+    </article>
+  </main>
+
+  <main class="main_ru">
+    <article>
+      <h1 class="name">ЧПУ фрезерование</h1>
+      <p class="text">Мы можем изготовить детали любой сложности,
+        от простых до высокоточных с использованием различных
+        материалов, таких как сталь, алюминий, медь,
+        латунь и другие металлы.</p>
+      <ul>
+        <li>Конструкторские услуги</li>
+        <li>Работаем с жесткими металлами</li>
+        <li>Производим штампы и пресс-формы.</li>
+      </ul>
+    </article>
+
+    <article>
+      <button class="bottom" onclick="hideButtons()">Рассчитать стоимость</button>
+    </article>
+  </main>
+
+  <main class="main_eng">
+    <article>
+      <h1 class="name">CNC Milling</h1>
+      <p class="text">We can manufacture parts of any complexity,
+        from simple to high-precision, using various
+        materials such as steel, aluminum, copper,
+        brass, and other metals.</p>
+      <ul>
+        <li>Design services</li>
+        <li>Working with hard metals</li>
+        <li>Manufacturing dies and molds</li>
+      </ul>
+    </article>
+
+    <article>
+      <button class="bottom" onclick="hideButtons()">Calculate Cost</button>
+    </article>
+  </main>
+
+  <script>
+    function togglePopup(event) {
+      event.stopPropagation();
+      var pop = document.getElementById("my_popup");
+      pop.classList.toggle("show");
+    }
+
+    function changeLanguage(language) {
+      var languageIcon = document.getElementById("languageIcon");
+      var pop = document.getElementById("my_popup");
+      var mainUa = document.querySelector(".main_ua");
+      var mainRu = document.querySelector(".main_ru");
+      var mainEng = document.querySelector(".main_eng");
+
+      switch (language) {
+        case "main":
+          languageIcon.src = "img/lang_main.png";
+          mainUa.style.opacity = "1";
+          mainRu.style.opacity = "0";
+          mainEng.style.opacity = "0";
+          
+          break;
+        case "uk":
+          languageIcon.src = "img/lang_ua.png";
+          mainUa.style.opacity = "1";
+          mainRu.style.opacity = "0";
+          mainEng.style.opacity = "0";
+          ul.classList.toggle("show");
+          break;
+        case "ru":
+          languageIcon.src = "img/lang_ru.png";
+          mainUa.style.opacity = "0";
+          mainRu.style.opacity = "1";
+          mainEng.style.opacity = "0";
+          ul.classList.toggle("show");
+          break;
+        case "en":
+          languageIcon.src = "img/lang_eng.png";
+          mainUa.style.opacity = "0";
+          mainRu.style.opacity = "0";
+          mainEng.style.opacity = "1";
+          ul.classList.toggle("show");
+          break;
+        
+      }
+
+      pop.classList.remove("show");
+    }
+
+    function hideButtons() {
+      var buttons = document.querySelectorAll(".bottom");
+      buttons.forEach(function(button) {
+        button.style.display = "none";
+      });
+    }
+  </script>
+</body>
+
+</html>
